@@ -1,0 +1,40 @@
+#!/usr/bin/env node
+
+//
+// (c) 2016-XX, PJ$
+// me@pjstein.co
+// home.base
+//
+// bin/light-up
+//
+
+'use strict';
+
+const WebpackDevServer = require('webpack-dev-server');
+const get_config       = require('../webpack.config.dev');
+const webpack          = require('webpack');
+const argv             = require('yargs').argv;
+
+// Input -----------------------------------------------------------------------
+const port = argv.port;
+const host = '0.0.0.0';
+
+if (!port) {
+  console.error("Usage: bin/hot-server --port=<port>");
+  process.exit(1);
+}
+
+const config  = get_config(port);
+const address = `${ host }:${ port }`;
+
+// Main ------------------------------------------------------------------------
+new WebpackDevServer(webpack(config), {
+  publicPath         : config.output.publicPath,
+  hot                : true,
+  historyApiFallback : true
+}).listen(port, host, function (err, result) {
+  if (err) {
+    return console.error(err);
+  }
+  console.log(`Listening at http://${ address }/`);
+});
