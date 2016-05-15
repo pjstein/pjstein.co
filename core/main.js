@@ -9,7 +9,7 @@
 'use strict';
 
 // Reset the styles no matter what.
-require('./style/reset.css');
+require('normalize.css');
 
 // Constants -------------------------------------------------------------------
 const ROOT_NODE = document.getElementById('root');
