@@ -1,5 +1,5 @@
 {
-  "name": "home.base",
+  "name": "pjstein.co",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -8,14 +8,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+ssh://git@github.com/pjstein/home.base.git"
+    "url": "git+ssh://git@github.com/pjstein/pjstein.co.git"
   },
   "author": "PJ$ <me@pjstein.co>",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/pjstein/home.base/issues"
+    "url": "https://github.com/pjstein/pjstein.co/issues"
   },
-  "homepage": "https://github.com/pjstein/home.base#readme",
+  "homepage": "https://github.com/pjstein/pjstein.co#readme",
   "dependencies": {
     "babel-core": "^6.8.0",
     "babel-loader": "^6.2.4",
